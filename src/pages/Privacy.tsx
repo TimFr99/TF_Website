@@ -37,7 +37,7 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
               <br />
               Email-Kontakt:{' '}
               <a href="mailto:tim@t-freitag.de" className="text-emerald-600 hover:text-emerald-700">
-                tim@t-freitag.de
+                info@tim-freitag.de
               </a>
               <br />
               Eingetragen im Handelsregister des Amtsgerichts Paderborn unter der HRB 16602
