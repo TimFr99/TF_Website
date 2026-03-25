@@ -1,8 +1,7 @@
-interface FooterProps {
-  onNavigate: (page: string) => void;
-}
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Footer({ onNavigate }: FooterProps) {
+export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -22,7 +21,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => {
-                    onNavigate('home');
+                    navigate('/');
                     setTimeout(() => {
                       const element = document.getElementById('services');
                       element?.scrollIntoView({ behavior: 'smooth' });
@@ -36,7 +35,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => {
-                    onNavigate('home');
+                    navigate('/');
                     setTimeout(() => {
                       const element = document.getElementById('process');
                       element?.scrollIntoView({ behavior: 'smooth' });
@@ -59,36 +58,36 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="font-semibold mb-4">Rechtliches</h4>
             <ul className="space-y-2">
               <li>
-                <button
-                  onClick={() => onNavigate('privacy')}
+                <Link
+                  to="/datenschutz"
                   className="text-slate-400 hover:text-white transition-colors text-left"
                 >
                   Datenschutzerklärung
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('imprint')}
+                <Link
+                  to="/impressum"
                   className="text-slate-400 hover:text-white transition-colors text-left"
                 >
                   Impressum
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('terms')}
+                <Link
+                  to="/agb"
                   className="text-slate-400 hover:text-white transition-colors text-left"
                 >
                   AGB
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('liability')}
+                <Link
+                  to="/haftungsausschluss"
                   className="text-slate-400 hover:text-white transition-colors text-left"
                 >
                   Gesonderte Haftungsregelung
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

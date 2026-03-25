@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
-  onNavigate: (page: string) => void;
   isLegalPage?: boolean;
 }
 
-export default function Header({ onNavigate, isLegalPage = false }: HeaderProps) {
+export default function Header({ isLegalPage = false }: HeaderProps) {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLegalDropdownOpen, setIsLegalDropdownOpen] = useState(false);
@@ -51,8 +52,8 @@ export default function Header({ onNavigate, isLegalPage = false }: HeaderProps)
     >
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => onNavigate('home')}
+          <Link
+            to="/"
             className={`text-2xl font-bold hover:opacity-80 transition-opacity ${
               isLegalPage
                 ? 'text-white'
@@ -60,7 +61,7 @@ export default function Header({ onNavigate, isLegalPage = false }: HeaderProps)
             }`}
           >
             Tim Freitag Consulting
-          </button>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             <a
@@ -103,42 +104,34 @@ export default function Header({ onNavigate, isLegalPage = false }: HeaderProps)
               </button>
               {isLegalDropdownOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50">
-                  <button
-                    onClick={() => {
-                      onNavigate('imprint');
-                      setIsLegalDropdownOpen(false);
-                    }}
+                  <Link
+                    to="/impressum"
+                    onClick={() => setIsLegalDropdownOpen(false)}
                     className="block w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 font-medium"
                   >
                     Impressum
-                  </button>
-                  <button
-                    onClick={() => {
-                      onNavigate('privacy');
-                      setIsLegalDropdownOpen(false);
-                    }}
+                  </Link>
+                  <Link
+                    to="/datenschutz"
+                    onClick={() => setIsLegalDropdownOpen(false)}
                     className="block w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 font-medium"
                   >
                     Datenschutz
-                  </button>
-                  <button
-                    onClick={() => {
-                      onNavigate('terms');
-                      setIsLegalDropdownOpen(false);
-                    }}
+                  </Link>
+                  <Link
+                    to="/agb"
+                    onClick={() => setIsLegalDropdownOpen(false)}
                     className="block w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 font-medium"
                   >
                     AGB
-                  </button>
-                  <button
-                    onClick={() => {
-                      onNavigate('liability');
-                      setIsLegalDropdownOpen(false);
-                    }}
+                  </Link>
+                  <Link
+                    to="/haftungsausschluss"
+                    onClick={() => setIsLegalDropdownOpen(false)}
                     className="block w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 font-medium"
                   >
                     Gesonderte Haftungsregelung
-                  </button>
+                  </Link>
                 </div>
               )}
             </div>
@@ -180,42 +173,34 @@ export default function Header({ onNavigate, isLegalPage = false }: HeaderProps)
             </a>
             <div className="px-4 py-2">
               <div className="text-slate-900 font-semibold mb-2">Rechtliches</div>
-              <button
-                onClick={() => {
-                  onNavigate('imprint');
-                  setIsMobileMenuOpen(false);
-                }}
+              <Link
+                to="/impressum"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left px-2 py-2 text-slate-700 hover:bg-slate-50 font-medium rounded"
               >
                 Impressum
-              </button>
-              <button
-                onClick={() => {
-                  onNavigate('privacy');
-                  setIsMobileMenuOpen(false);
-                }}
+              </Link>
+              <Link
+                to="/datenschutz"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left px-2 py-2 text-slate-700 hover:bg-slate-50 font-medium rounded"
               >
                 Datenschutz
-              </button>
-              <button
-                onClick={() => {
-                  onNavigate('terms');
-                  setIsMobileMenuOpen(false);
-                }}
+              </Link>
+              <Link
+                to="/agb"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left px-2 py-2 text-slate-700 hover:bg-slate-50 font-medium rounded"
               >
                 AGB
-              </button>
-              <button
-                onClick={() => {
-                  onNavigate('liability');
-                  setIsMobileMenuOpen(false);
-                }}
+              </Link>
+              <Link
+                to="/haftungsausschluss"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left px-2 py-2 text-slate-700 hover:bg-slate-50 font-medium rounded"
               >
                 Gesonderte Haftungsregelung
-              </button>
+              </Link>
             </div>
             <a
               href="https://calendly.com/tim-t-freitag/30min"

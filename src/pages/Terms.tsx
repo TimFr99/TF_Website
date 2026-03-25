@@ -1,20 +1,17 @@
 import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface TermsProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Terms({ onNavigate }: TermsProps) {
+export default function Terms() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-4xl mx-auto px-6 py-24">
-        <button
-          onClick={() => onNavigate('home')}
+        <Link
+          to="/"
           className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium mb-8 transition-colors"
         >
           <ArrowLeft size={20} />
           Zurück zur Startseite
-        </button>
+        </Link>
 
         <h1 className="text-4xl font-bold text-slate-900 mb-8">Allgemeine Geschäftsbedingungen</h1>
 

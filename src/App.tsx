@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import FloatingButton from './components/ui/FloatingButton';
@@ -8,39 +9,42 @@ import Imprint from './pages/Imprint';
 import Terms from './pages/Terms';
 import Liability from './pages/Liability';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
+  }, [pathname]);
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <Home />;
-      case 'privacy':
-        return <Privacy onNavigate={setCurrentPage} />;
-      case 'imprint':
-        return <Imprint onNavigate={setCurrentPage} />;
-      case 'terms':
-        return <Terms onNavigate={setCurrentPage} />;
-      case 'liability':
-        return <Liability onNavigate={setCurrentPage} />;
-      default:
-        return <Home />;
-    }
-  };
+  return null;
+}
 
-  const isLegalPage = ['privacy', 'imprint', 'terms', 'liability'].includes(currentPage);
+function Layout() {
+  const location = useLocation();
+  const isLegalPage = ['/datenschutz', '/impressum', '/agb', '/haftungsausschluss'].includes(location.pathname);
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onNavigate={setCurrentPage} isLegalPage={isLegalPage} />
-      {renderPage()}
-      <Footer onNavigate={setCurrentPage} />
+      <ScrollToTop />
+      <Header isLegalPage={isLegalPage} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/datenschutz" element={<Privacy />} />
+        <Route path="/impressum" element={<Imprint />} />
+        <Route path="/agb" element={<Terms />} />
+        <Route path="/haftungsausschluss" element={<Liability />} />
+      </Routes>
+      <Footer />
       <FloatingButton />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   );
 }
 
