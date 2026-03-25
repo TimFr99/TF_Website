@@ -75,7 +75,7 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
 
             <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">Hosting</h4>
             <p className="text-slate-600 leading-relaxed">
-             Die Website wird über den Dienst StackBlitz Inc., 2261 Market Street #4818, San Francisco, CA 94114, USA (bereitgestellt über die Plattform bolt.new) gehostet.
+           Die Website wird bei dem Anbieter Netlify, Inc., 2325 3rd Street, Suite 296, San Francisco, CA 94107, USA gehostet.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Beim Aufruf der Website werden durch den Hostinganbieter automatisch Informationen erfasst
