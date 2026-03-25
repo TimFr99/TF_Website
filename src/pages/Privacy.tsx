@@ -175,7 +175,7 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
                 rel="noopener noreferrer"
                 className="text-emerald-600 hover:text-emerald-700 break-all"
               >
-                https://legal.linkedin.com/pages-joint-controller-addendum
+               https://www.linkedin.com/legal/l/page-joint-controller-addendum
               </a>
             </p>
 
