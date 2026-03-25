@@ -170,7 +170,7 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
               LinkedIn:
               <br />
               <a
-                href="https://legal.linkedin.com/pages-joint-controller-"
+                href="https://www.linkedin.com/legal/l/page-joint-controller-addendum"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-emerald-600 hover:text-emerald-700 break-all"
