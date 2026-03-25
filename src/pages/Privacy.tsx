@@ -37,7 +37,7 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
               <br />
               Email-Kontakt:{' '}
               <a href="mailto:tim@t-freitag.de" className="text-emerald-600 hover:text-emerald-700">
-                info@tim-freitag.de
+                tim@t-freitag.de
               </a>
               <br />
               Eingetragen im Handelsregister des Amtsgerichts Paderborn unter der HRB 16602
@@ -75,7 +75,8 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
 
             <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">Hosting</h4>
             <p className="text-slate-600 leading-relaxed">
-           Die Website wird bei dem Anbieter Netlify, Inc., 2325 3rd Street, Suite 296, San Francisco, CA 94107, USA gehostet.
+              Die Website wird bei dem Anbieter Netlify, Inc., 2325 3rd Street, Suite 296, San Francisco, CA
+              94107, USA gehostet.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Beim Aufruf der Website werden durch den Hostinganbieter automatisch Informationen erfasst
@@ -108,6 +109,152 @@ export default function Privacy({ onNavigate }: PrivacyProps) {
             <p className="text-slate-600 leading-relaxed">
               Im Rahmen der technischen Bereitstellung der Domain können ebenfalls personenbezogene Daten
               verarbeitet werden.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-medium text-slate-800 mb-3">
+              2.2 Präsenz in sozialen Netzwerken und Nutzung von Werbeplattformen
+            </h3>
+            <p className="text-slate-600 leading-relaxed">
+              Die Tim Freitag Holding UG (haftungsbeschränkt) betreibt Unternehmensprofile auf sozialen
+              Netzwerken sowie nutzt diese Plattformen zur Kommunikation, Darstellung von Leistungen und zur
+              Durchführung von Marketingmaßnahmen.
+            </p>
+            <p className="text-slate-600 leading-relaxed">Hierzu gehören insbesondere:</p>
+            <ul className="list-disc pl-6 text-slate-600 leading-relaxed space-y-2">
+              <li>Facebook (Meta Platforms Ireland Ltd.)</li>
+              <li>LinkedIn (LinkedIn Ireland Unlimited Company)</li>
+            </ul>
+
+            <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">Nutzung sozialer Netzwerke:</h4>
+            <p className="text-slate-600 leading-relaxed">
+              Beim Besuch unserer Profile auf sozialen Netzwerken werden personenbezogene Daten durch die jeweiligen
+              Plattformbetreiber verarbeitet. Dies kann insbesondere folgende Daten umfassen:
+            </p>
+            <ul className="list-disc pl-6 text-slate-600 leading-relaxed space-y-2">
+              <li>Nutzungs- und Interaktionsdaten (z. B. Likes, Kommentare, Nachrichten)</li>
+              <li>technische Daten (z. B. IP-Adresse, Geräteinformationen)</li>
+              <li>Profildaten der Nutzer</li>
+            </ul>
+            <p className="text-slate-600 leading-relaxed">
+              Wir weisen darauf hin, dass wir auf die Datenverarbeitung durch die Plattformbetreiber nur
+              eingeschränkten Einfluss haben.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Soweit wir über unsere Profile mit Nutzern kommunizieren oder Inhalte bereitstellen, erfolgt die
+              Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
+              Öffentlichkeitsarbeit und Kommunikation).
+            </p>
+
+            <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">Gemeinsame Verantwortlichkeit:</h4>
+            <p className="text-slate-600 leading-relaxed">
+              Für bestimmte Verarbeitungsvorgänge (insbesondere im Rahmen von Seiten-Insights und
+              Analysefunktionen) besteht eine gemeinsame Verantwortlichkeit gemäß Art. 26 DSGVO mit dem
+              jeweiligen Plattformbetreiber.
+            </p>
+            <p className="text-slate-600 leading-relaxed">Weitere Informationen hierzu:</p>
+            <p className="text-slate-600 leading-relaxed">
+              Facebook:
+              <br />
+              <a
+                href="https://www.facebook.com/legal/terms/page_controller_addendum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 hover:text-emerald-700 break-all"
+              >
+                https://www.facebook.com/legal/terms/page_controller_addendum
+              </a>
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              LinkedIn:
+              <br />
+              <a
+                href="https://legal.linkedin.com/pages-joint-controller-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 hover:text-emerald-700 break-all"
+              >
+                https://legal.linkedin.com/pages-joint-controller-
+              </a>
+            </p>
+
+            <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">
+              Nutzung von Werbe- und Marketingfunktionen:
+            </h4>
+            <p className="text-slate-600 leading-relaxed">
+              Die Plattformen Facebook und LinkedIn werden auch zur Schaltung von Werbeanzeigen genutzt.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Im Rahmen dessen können durch die Plattformbetreiber personenbezogene Daten verarbeitet werden,
+              insbesondere:
+            </p>
+            <ul className="list-disc pl-6 text-slate-600 leading-relaxed space-y-2">
+              <li>Zielgruppenbildung (Targeting)</li>
+              <li>Ausspielung personalisierter Werbung</li>
+              <li>Analyse des Nutzerverhaltens</li>
+              <li>Messung der Werbewirksamkeit</li>
+            </ul>
+            <p className="text-slate-600 leading-relaxed">
+              Diese Verarbeitung erfolgt durch die jeweiligen Plattformbetreiber in eigener datenschutzrechtlicher
+              Verantwortung.
+            </p>
+
+            <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">Lead-Generierung (Lead Ads):</h4>
+            <p className="text-slate-600 leading-relaxed">
+              Wir nutzen auf Facebook und LinkedIn sogenannte Lead-Formulare, um Interessenten die Möglichkeit zu
+              geben, ihre Kontaktdaten direkt über die Plattform zu übermitteln.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Dabei können insbesondere folgende Daten verarbeitet werden:
+            </p>
+            <ul className="list-disc pl-6 text-slate-600 leading-relaxed space-y-2">
+              <li>Name</li>
+              <li>E-Mail-Adresse/Telefonnummer</li>
+              <li>weitere freiwillig angegebene Informationen</li>
+            </ul>
+            <p className="text-slate-600 leading-relaxed">
+              Die übermittelten Daten werden von uns zur Bearbeitung der Anfrage sowie zur Kontaktaufnahme
+              verwendet.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) sowie Art. 6 Abs. 1 lit.
+              f DSGVO (berechtigtes Interesse an effektivem Marketing und Kommunikation).
+            </p>
+
+            <h4 className="text-lg font-medium text-slate-800 mb-3 mt-6">
+              Datenverarbeitung durch Plattformbetreiber:
+            </h4>
+            <p className="text-slate-600 leading-relaxed">
+              Die Verarbeitung personenbezogener Daten durch die jeweiligen Plattformbetreiber erfolgt nach deren
+              eigenen Datenschutzbestimmungen:
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Facebook (Meta):
+              <br />
+              <a
+                href="https://www.facebook.com/privacy/policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 hover:text-emerald-700 break-all"
+              >
+                https://www.facebook.com/privacy/policy
+              </a>
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              LinkedIn:
+              <br />
+              <a
+                href="https://www.linkedin.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 hover:text-emerald-700 break-all"
+              >
+                https://www.linkedin.com/legal/privacy-policy
+              </a>
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              Wir haben keinen vollständigen Einfluss auf die Datenverarbeitung durch die Plattformbetreiber.
             </p>
           </section>
 
