@@ -38,7 +38,7 @@ export default function Trust() {
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Über 7 Jahre praktische Erfahrung im Aufbau skalierbarer Vertriebssysteme,
-            der Führung von Sales-Teams und der strategischen Unternehmenssteuerung
+            der Führung im Vertrieb und der strategischen Unternehmenssteuerung
           </p>
         </div>
 
